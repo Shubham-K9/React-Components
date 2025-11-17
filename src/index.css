@@ -49,3 +49,26 @@
   opacity: 0.4;
   cursor: not-allowed;
 }
+.main {
+  width: 300px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-container button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  transition: 0.3s ease;
+}
+
+.toggle-container button:hover {
+  transform: scale(1.08);
+  background: #e0e0e0;
+}
