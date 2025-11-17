@@ -72,3 +72,36 @@
   transform: scale(1.08);
   background: #e0e0e0;
 }
+
+.PM{
+  background-color: #333;
+  color: white;
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+  border-radius: 15px;
+  
+ 
+
+}
+
+.UN{
+  margin-bottom: 15px;
+  padding-left: 20%;
+  
+}
+.UN input{
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.UN button{
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}

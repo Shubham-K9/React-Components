@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Counter from '../components/Counter.jsx'
 import Toggle from '../components/Toggle.jsx'
+import PassHide from '../components/PassHide.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
       <Counter />
     </div>
     <Toggle />
+    <PassHide />
     
   </StrictMode>,
 )
