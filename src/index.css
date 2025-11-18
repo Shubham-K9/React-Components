@@ -105,3 +105,20 @@
   color: white;
   cursor: pointer;
 }
+
+.character-count{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  border-radius: 8px;
+  background-color: darkgray;
+  padding: 10px;
+  width: fit-content;
+  margin-left: 40%;
+  margin-top: 40px;
+}
+.cc{
+  font-weight: bold;
+  color: black;
+  
+}
