@@ -120,5 +120,98 @@
 .cc{
   font-weight: bold;
   color: black;
-  
+
+}
+
+/* Main container */
+.form {
+  width: 420px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.form h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+  font-size: 22px;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs */
+.form-group input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Focus effect */
+.form-group input:focus {
+  border-color: #6a5acd;
+  box-shadow: 0px 0px 5px rgba(106, 90, 205, 0.3);
+}
+
+/* Error message */
+.form-group p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: red;
+}
+
+/* Show/Hide button */
+.form-group button {
+  margin-top: 10px;
+  width: 90px;
+  padding: 7px 10px;
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.form-group button:hover {
+  background-color: #594ac2;
+}
+
+/* Submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.25s;
+}
+
+button[type="submit"]:hover {
+  background-color: #444;
 }

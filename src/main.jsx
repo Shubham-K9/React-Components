@@ -6,6 +6,7 @@ import Counter from '../components/Counter.jsx'
 import Toggle from '../components/Toggle.jsx'
 import PassHide from '../components/PassHide.jsx'
 import CharacterCnt from '../components/CharacterCnt.jsx'
+import FormVal from '../components/FormVal.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
     <Toggle />
     <PassHide />
     <CharacterCnt />
+    <FormVal />
     
   </StrictMode>,
 )
