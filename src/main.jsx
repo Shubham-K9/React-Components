@@ -7,6 +7,7 @@ import Toggle from '../components/Toggle.jsx'
 import PassHide from '../components/PassHide.jsx'
 import CharacterCnt from '../components/CharacterCnt.jsx'
 import FormVal from '../components/FormVal.jsx'
+import Planet from '../components/Planet.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
     <PassHide />
     <CharacterCnt />
     <FormVal />
+    <Planet/>
     
   </StrictMode>,
 )
