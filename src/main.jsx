@@ -8,6 +8,7 @@ import PassHide from '../components/PassHide.jsx'
 import CharacterCnt from '../components/CharacterCnt.jsx'
 import FormVal from '../components/FormVal.jsx'
 import Planet from '../components/Planet.jsx'
+import Timer from '../components/Timer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,7 +20,9 @@ createRoot(document.getElementById('root')).render(
     <PassHide />
     <CharacterCnt />
     <FormVal />
+    <Timer/>
     <Planet/>
+    
     
   </StrictMode>,
 )
