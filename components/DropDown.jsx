@@ -1,49 +1,42 @@
 import { useState } from "react";
 
-const DropDown=()=>{
-
-    //const [data,setData]=useState([]);
-
-    const dishes=[
-
-        {name:"Biryani", price:250,location:"Hyderabad"},
-        {name:"Pizza", price:500,location:"Italy"},
-        {name:"Burger", price:150, location:"USA"},
-        {name:"Pasta", price:300, location:"Italy"}
-
+const DropDown = () => {
+    const dishes = [
+        { name: "Biryani", price: 250, location: "Hyderabad" },
+        { name: "Pizza", price: 500, location: "Italy" },
+        { name: "Burger", price: 150, location: "USA" },
+        { name: "Pasta", price: 300, location: "Italy" }
     ];
 
-    const [selectedDish, setSelectedDish]=useState(null);
-
+    const [selectedDish, setSelectedDish] = useState("");
 
     return (
-        <div>
-            DropDown Component
-            
-            <div>
-                            <select onChange={(e)=>setSelectedDish(e.target.value)} style={{marginLeft:"40%",border:"2px solid black",
-                                width:"250px",padding:"10px",borderRadius:"10px",backgroundColor:"lightgrey"}}>
+        <div className="container">
+            <h2 className="title">Dish Selector</h2>
 
-                                {dishes.map((dish,i)=>{
-                                    return(
-                                    <option key={i} style={{border:"1px solid black", margin:"10px", padding:"10px", width:"200px"}}>
-                                        {dish.name} - {dish.price} - {dish.location}
-                                        </option>
-                                    );
+            <select
+                className="dropdown"
+                onChange={(e) => setSelectedDish(e.target.value)}
+            >
+                <option value="">-- Select a Dish --</option>
 
-                                })}
-                                
-                            </select>
-                            <p >{selectedDish}</p>
+                {dishes.map((dish, i) => (
+                    <option
+                        key={i}
+                        value={`${dish.name} - ₹${dish.price} - ${dish.location}`}
+                    >
+                        {dish.name} - ₹{dish.price} - {dish.location}
+                    </option>
+                ))}
+            </select>
 
-            </div>
-                            
-            
+            {selectedDish && (
+                <div className="resultBox">
+                    <p className="resultText">{selectedDish}</p>
+                </div>
+            )}
         </div>
     );
-}
-
-
-
+};
 
 export default DropDown;
