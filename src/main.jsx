@@ -10,6 +10,7 @@ import FormVal from '../components/FormVal.jsx'
 import Planet from '../components/Planet.jsx'
 import Timer from '../components/Timer.jsx'
 import Accordian from '../components/Accordian.jsx'
+import DropDown from '../components/DropDown.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
     <FormVal />
     <Timer/>
     <Accordian/>
+    <DropDown/>
     <Planet/>
     
     
