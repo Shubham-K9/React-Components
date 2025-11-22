@@ -9,6 +9,7 @@ import CharacterCnt from '../components/CharacterCnt.jsx'
 import FormVal from '../components/FormVal.jsx'
 import Planet from '../components/Planet.jsx'
 import Timer from '../components/Timer.jsx'
+import Accordian from '../components/Accordian.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
     <CharacterCnt />
     <FormVal />
     <Timer/>
+    <Accordian/>
     <Planet/>
     
     
