@@ -11,6 +11,7 @@ import Planet from '../components/Planet.jsx'
 import Timer from '../components/Timer.jsx'
 import Accordian from '../components/Accordian.jsx'
 import DropDown from '../components/DropDown.jsx'
+import CountDown from '../components/CountDown.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')).render(
     <Timer/>
     <Accordian/>
     <DropDown/>
+    <CountDown/>
     <Planet/>
     
     
