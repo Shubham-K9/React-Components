@@ -1,49 +1,47 @@
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 
+const CountDown = () => {
+  const [time, setTime] = useState(10);
+  const [isActive, setIsActive] = useState(false);
 
+  useEffect(() => {
+    let interval;
 
+    if (isActive && time > 0) {
+      interval = setInterval(() => {
+        setTime((prevTime) => prevTime - 1);
+      }, 1000);
+    }
 
-const CountDown=()=>{
+    return () => clearInterval(interval);
+  }, [time, isActive]);
 
-    const[time,setTime]=useState(10);
-    const[isActive,setIsActive]=useState(false);
+  const handlePause = () => {
+    setIsActive((prev) => !prev);
+  };
 
-    useEffect(()=>{
-        let interval;
-        if(isActive && time>0){
-            interval=setInterval(()=>{
-                setTime((prevTime)=>prevTime-1);
-            },1000);
-        }
-        else{
-            clearInterval(interval);
-        }
-
-    
-    return()=>clearInterval(interval);
-    },[time,isActive]);
-
-
-    const handlePause=()=>{
-        setIsActive((prev)=>(!prev));
-    };
-const handleReset = () => {
+  const handleReset = () => {
     setTime(10);
     setIsActive(false);
   };
-    return (
 
-        <div>CountDown Component
-            <button onClick={handleReset} style={{marginLeft:"10px"}}>Reset</button>
-            <button onClick={handlePause} style={{marginLeft:"10px"}}>{isActive?"Pause":"Start"}</button>
-            <h2>{time} seconds</h2>
+  return (
+    <div className="countdown-container">
+      <h2 className="heading">CountDown Component</h2>
 
-        </div>
+      <div className="button-group">
+        <button className="btn reset" onClick={handleReset}>
+          Reset
+        </button>
 
-    );
-}
+        <button className="btn start" onClick={handlePause}>
+          {isActive ? "Pause" : "Start"}
+        </button>
+      </div>
 
-
-
+      <h1 className="timer">{time} sec</h1>
+    </div>
+  );
+};
 
 export default CountDown;

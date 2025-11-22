@@ -402,7 +402,7 @@ button[type="submit"]:hover {
     margin-top: 50px;
     text-align: center;
     font-family: Arial, sans-serif;
-    
+
 }
 
 .title {
@@ -443,4 +443,65 @@ button[type="submit"]:hover {
     font-size: 18px;
     color: #1a2b7b;
     font-weight: 600;
+}
+
+/* Overall container */
+.countdown-container {
+  text-align: center;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.heading {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Button wrapper */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Common button style */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+/* Reset button */
+.reset {
+  background-color: #ff4444;
+  color: white;
+}
+
+.reset:hover {
+  background-color: #d93636;
+}
+
+/* Start/Pause button */
+.start {
+  background-color: #007bff;
+  color: white;
+}
+
+.start:hover {
+  background-color: #0063cc;
+}
+
+/* Timer text */
+.timer {
+  font-size: 48px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 10px;
 }
