@@ -12,6 +12,9 @@ const CountDown = () => {
         setTime((prevTime) => prevTime - 1);
       }, 1000);
     }
+    else if (time === 0) {
+      alert("Time's up!");
+    }
 
     return () => clearInterval(interval);
   }, [time, isActive]);
