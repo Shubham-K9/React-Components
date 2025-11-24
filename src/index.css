@@ -505,3 +505,112 @@ button[type="submit"]:hover {
   color: #222;
   margin-top: 10px;
 }
+/* Main container */
+.todo-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.todo-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Input field */
+.todo-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.todo-input:focus {
+    border-color: #4CAF50;
+}
+
+/* Add/Update button */
+.btn-add {
+    padding: 10px 16px;
+    margin-left: 10px;
+    background: #27ae60;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: #1e8449;
+}
+
+/* List */
+.todo-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Each item */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: 0.2s;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    border-left-color: #2ecc71;
+}
+
+/* Buttons */
+.btn-edit {
+    background: #f39c12;
+    padding: 6px 10px;
+    margin-left: 10px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background: #d68910;
+}
+
+.btn-delete {
+    background: #e74c3c;
+    padding: 6px 10px;
+    margin-left: 10px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+}
+
+/* Checkbox spacing */
+.todo-checkbox {
+    margin-right: 10px;
+}

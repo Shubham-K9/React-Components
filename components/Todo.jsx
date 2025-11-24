@@ -46,55 +46,60 @@ const Todo = () => {
     };
 
     return (
-        <div>
-            <h2>Todo Component</h2>
+        <div className="todo-container">
+    <h2>Todo Component</h2>
 
-            <input 
-                type="text" 
-                placeholder="Add todo..." 
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)} 
-            />
+    <input 
+        type="text"
+        placeholder="Add todo..."
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        className="todo-input"
+    />
 
-            <button 
-                onClick={handleAddItem} 
-                style={{ backgroundColor: "green", color: "white", borderRadius: "4px", cursor: "pointer", opacity: "0.8", marginLeft: "10px" }}
+    <button 
+        onClick={handleAddItem}
+        className="btn-add"
+    >
+        {editIndex !== null ? 'Update Item' : 'Add Item'}
+    </button>
+
+    <ul className="todo-list">
+        {items.map((item, index) => (
+            <li 
+                key={index} 
+                className={`todo-item ${item.completed ? "completed" : ""}`}
             >
-                {editIndex !== null ? 'Update Item' : 'Add Item'}
-            </button>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                    <input
+                        type="checkbox"
+                        checked={item.completed}
+                        onChange={() => toggleComplete(index)}
+                        className="todo-checkbox"
+                    />
+                    {item.text}
+                </div>
 
-            <ul>
-                {items.map((item, index) => (
-                    <li 
-                        key={index} 
-                        style={{ marginBottom: "8px", textDecoration: item.completed ? 'line-through' : 'none' }}
+                <div>
+                    <button 
+                        className="btn-edit"
+                        onClick={() => handleEditItem(index)}
                     >
-                        <input
-                            type="checkbox"
-                            checked={item.completed}
-                            onChange={() => toggleComplete(index)}
-                            style={{ marginRight: "10px" }}
-                        />
+                        Edit
+                    </button>
 
-                        {item.text}
+                    <button 
+                        className="btn-delete"
+                        onClick={() => handleDeleteItem(index)}
+                    >
+                        Delete
+                    </button>
+                </div>
+            </li>
+        ))}
+    </ul>
+</div>
 
-                        <button 
-                            style={{ marginLeft: "10px", backgroundColor: "orange", color: "white", opacity: "0.8", border: "none", padding: "4px 8px", borderRadius: "4px" }} 
-                            onClick={() => handleEditItem(index)}
-                        >
-                            Edit
-                        </button>
-
-                        <button 
-                            style={{ marginLeft: "10px", backgroundColor: "red", color: "white", opacity: "0.7", border: "none", padding: "4px 8px", cursor: "pointer", borderRadius: "4px" }} 
-                            onClick={() => handleDeleteItem(index)}
-                        >
-                            Delete
-                        </button>
-                    </li>
-                ))}
-            </ul>
-        </div>
     );
 };
 
