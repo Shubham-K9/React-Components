@@ -12,6 +12,7 @@ import Timer from '../components/Timer.jsx'
 import Accordian from '../components/Accordian.jsx'
 import DropDown from '../components/DropDown.jsx'
 import CountDown from '../components/CountDown.jsx'
+import Todo from '../components/Todo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
     <Timer/>
     <Accordian/>
     <DropDown/>
+    <Todo/>
     <CountDown/>
     <Planet/>
     
